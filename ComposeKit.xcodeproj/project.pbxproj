@@ -14,6 +14,7 @@
 		7907ADC823C6963000BF45CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7907ADC723C6963000BF45CA /* Assets.xcassets */; };
 		7907ADCB23C6963000BF45CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7907ADC923C6963000BF45CA /* LaunchScreen.storyboard */; };
 		7907ADD623C6963100BF45CA /* ComposeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ADD523C6963100BF45CA /* ComposeKitTests.swift */; };
+		7907ADE223C6969C00BF45CA /* Composable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ADE123C6969C00BF45CA /* Composable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		7907ADD123C6963100BF45CA /* ComposeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7907ADD523C6963100BF45CA /* ComposeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeKitTests.swift; sourceTree = "<group>"; };
 		7907ADD723C6963100BF45CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7907ADE123C6969C00BF45CA /* Composable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		7907ADBD23C6962D00BF45CA /* ComposeKit */ = {
 			isa = PBXGroup;
 			children = (
+				7907ADE023C6963D00BF45CA /* Compose */,
 				7907ADBE23C6962D00BF45CA /* AppDelegate.swift */,
 				7907ADC023C6962D00BF45CA /* SceneDelegate.swift */,
 				7907ADC223C6962D00BF45CA /* ViewController.swift */,
@@ -97,6 +100,14 @@
 				7907ADD723C6963100BF45CA /* Info.plist */,
 			);
 			path = ComposeKitTests;
+			sourceTree = "<group>";
+		};
+		7907ADE023C6963D00BF45CA /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				7907ADE123C6969C00BF45CA /* Composable.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7907ADE223C6969C00BF45CA /* Composable.swift in Sources */,
 				7907ADC323C6962D00BF45CA /* ViewController.swift in Sources */,
 				7907ADBF23C6962D00BF45CA /* AppDelegate.swift in Sources */,
 				7907ADC123C6962D00BF45CA /* SceneDelegate.swift in Sources */,
