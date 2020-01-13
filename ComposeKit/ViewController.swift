@@ -12,6 +12,11 @@ class ViewController: UIViewController, Composable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
+        setupUI()
+    }
+    
+    fileprivate func setupUI() {
+        Text("Legal").position(top: 100, left: 100, bottom: 0, right: 100)
     }
 }
 
