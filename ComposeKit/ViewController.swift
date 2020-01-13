@@ -9,13 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, Composable {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        Text("Hello world")
+        self.view.backgroundColor = .black
     }
-
-
 }
 

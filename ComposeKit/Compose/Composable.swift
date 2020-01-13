@@ -8,19 +8,37 @@
 
 import UIKit
 
+enum ModeOrientation {
+    case bellow
+    case above
+}
+
 protocol Composable {
     func Text(_ text: String)
 }
 
+extension Composable where Self: UIViewController{
     func Text(_ text: String) {
+        let textComponent = TextComponent(text: text)
+        textComponent.addComponent(toView: self.view)
+    }
+}
+
+
+protocol Component {
+    var viewComponent: UIView { get set }
+}
+
+extension Component {
+    func addComponent(toView view: UIView) {
+        view.addSubview(self.viewComponent)
+        self.viewComponent.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
-        
+                   viewComponent.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+                   viewComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
         ])
-        
     }
-    
-    
 }
+
+
