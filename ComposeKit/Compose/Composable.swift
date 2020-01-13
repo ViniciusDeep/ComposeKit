@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol Composable {
-    func Text(_ text: String) -> Component
-}
+protocol Composable {}
 
 extension Composable where Self: UIViewController{
     @discardableResult
@@ -19,6 +17,14 @@ extension Composable where Self: UIViewController{
         textComponent.addComponent(toView: self.view)
         return textComponent
     }
+    
+    @discardableResult
+    func DrawImage(_ image: UIImage) -> Component {
+        let imageComponent = DrawImageComponent(image: image)
+        imageComponent.addComponent(toView: self.view)
+        return imageComponent
+    }
+    
 }
 
 
@@ -40,8 +46,8 @@ extension Component {
         NSLayoutConstraint.activate([
                           viewComponent.topAnchor.constraint(equalTo: view.topAnchor, constant: top),
                           viewComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: left),
-                          viewComponent.trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: right),
-                          viewComponent.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: bottom)
+                          viewComponent.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: right),
+                          viewComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottom)
         ])
         return self
     }

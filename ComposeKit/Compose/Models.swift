@@ -13,7 +13,14 @@ struct TextComponent: Component {
     
     init(text: String) {
         (viewComponent as? UILabel)?.text = text
-        (viewComponent as? UILabel)?.textColor = .white
+    }
+}
+
+struct DrawImageComponent: Component {
+    var viewComponent: UIView = UIImageView()
+    
+    init(image: UIImage) {
+        (viewComponent as? UIImageView)?.image = UIImage()
     }
 }
 

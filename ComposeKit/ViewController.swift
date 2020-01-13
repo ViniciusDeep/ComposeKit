@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController, Composable {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
         setupUI()
     }
     
     fileprivate func setupUI() {
-        Text("Legal").position(top: 100, left: 100, bottom: 0, right: 100)
+        Text("Legal").position(top: 30, left: 0, bottom: 0, right: 0)
+        DrawImage(#imageLiteral(resourceName: "image")).position(top: 30, left: 0, bottom: 0, right: 0)
     }
 }
 
