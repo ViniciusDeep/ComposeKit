@@ -25,3 +25,20 @@ struct DrawImageComponent: Component {
 }
 
 
+enum AlignmentList {
+    case horizontal
+    case vertical
+}
+
+struct ListComponent: Component {
+    var viewComponent: UIView
+    
+    init(alignment: AlignmentList) {
+        switch alignment {
+        case .horizontal:
+            viewComponent = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        case .vertical:
+            viewComponent = UITableView()
+        }
+    }
+}

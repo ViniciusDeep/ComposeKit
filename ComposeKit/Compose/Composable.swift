@@ -25,6 +25,13 @@ extension Composable where Self: UIViewController{
         return imageComponent
     }
     
+    @discardableResult
+    func List(_ items: Array<Any>, alignment: AlignmentList) -> Component {
+        let listComponent = ListComponent(alignment: alignment)
+        listComponent.addComponent(toView: self.view)
+        return listComponent
+    }
+    
 }
 
 
