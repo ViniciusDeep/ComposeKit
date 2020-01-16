@@ -15,6 +15,7 @@
 		7907ADCB23C6963000BF45CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7907ADC923C6963000BF45CA /* LaunchScreen.storyboard */; };
 		7907ADD623C6963100BF45CA /* ComposeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ADD523C6963100BF45CA /* ComposeKitTests.swift */; };
 		7907ADE223C6969C00BF45CA /* Composable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907ADE123C6969C00BF45CA /* Composable.swift */; };
+		79940FCA23CFC45A0005DBB8 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79940FC923CFC45A0005DBB8 /* CustomView.swift */; };
 		79C1357523CCF4E4007C69A1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1357423CCF4E4007C69A1 /* Models.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		7907ADD523C6963100BF45CA /* ComposeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeKitTests.swift; sourceTree = "<group>"; };
 		7907ADD723C6963100BF45CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7907ADE123C6969C00BF45CA /* Composable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composable.swift; sourceTree = "<group>"; };
+		79940FC923CFC45A0005DBB8 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		79C1357423CCF4E4007C69A1 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			children = (
 				7907ADE123C6969C00BF45CA /* Composable.swift */,
 				79C1357423CCF4E4007C69A1 /* Models.swift */,
+				79940FC923CFC45A0005DBB8 /* CustomView.swift */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				7907ADE223C6969C00BF45CA /* Composable.swift in Sources */,
 				7907ADC323C6962D00BF45CA /* ViewController.swift in Sources */,
 				7907ADBF23C6962D00BF45CA /* AppDelegate.swift in Sources */,
+				79940FCA23CFC45A0005DBB8 /* CustomView.swift in Sources */,
 				7907ADC123C6962D00BF45CA /* SceneDelegate.swift in Sources */,
 				79C1357523CCF4E4007C69A1 /* Models.swift in Sources */,
 			);

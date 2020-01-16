@@ -27,11 +27,10 @@ extension Composable where Self: UIViewController{
     
     @discardableResult
     func List(_ items: Array<Any>, alignment: AlignmentList) -> Component {
-        let listComponent = ListComponent(alignment: alignment)
+        let listComponent = ListComponent(elements: items, alignment: alignment)
         listComponent.addComponent(toView: self.view)
         return listComponent
     }
-    
 }
 
 

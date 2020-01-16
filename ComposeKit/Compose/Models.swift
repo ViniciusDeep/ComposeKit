@@ -33,12 +33,12 @@ enum AlignmentList {
 struct ListComponent: Component {
     var viewComponent: UIView
     
-    init(alignment: AlignmentList) {
+    init(elements: Array<Any>, alignment: AlignmentList) {
         switch alignment {
         case .horizontal:
             viewComponent = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         case .vertical:
-            viewComponent = UITableView()
+            viewComponent = CustomTableView(elements: elements)
         }
     }
 }

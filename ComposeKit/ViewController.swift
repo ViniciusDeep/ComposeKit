@@ -15,9 +15,7 @@ class ViewController: UIViewController, Composable {
     }
     
     fileprivate func setupUI() {
-        Text("Legal").position(top: 30, left: 0, bottom: 0, right: 0)
-        DrawImage(#imageLiteral(resourceName: "image")).position(top: 30, left: 0, bottom: 0, right: 0)
-        List(["Vinicius"], alignment: .horizontal)
+        List(["Vinicius"], alignment: .vertical).position(top: 30, left: 0, bottom: 0, right: 0)
     }
 }
 
