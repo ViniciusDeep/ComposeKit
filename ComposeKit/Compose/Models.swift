@@ -24,6 +24,18 @@ struct DrawImageComponent: Component {
     }
 }
 
+struct ButtonComponent: Component {
+    var viewComponent: UIView = UIButton()
+    
+    init() {
+        viewComponent = UIButton(type: .contactAdd)
+    }
+    
+    
+    
+    
+}
+
 
 enum AlignmentList {
     case horizontal
@@ -41,4 +53,10 @@ struct ListComponent: Component {
             viewComponent = CustomTableView(elements: elements)
         }
     }
+    
+    func add(component: Component) {
+        
+    }
+    
+    
 }

@@ -15,7 +15,13 @@ class ViewController: UIViewController, Composable {
     }
     
     fileprivate func setupUI() {
-        List(["Vinicius"], alignment: .vertical).position(top: 30, left: 0, bottom: 0, right: 0)
+        Button().position(top: 30, left: 0, bottom: 0, right: 0)
+        
+        
+//        List(["Vinicius", "Mangueira"], alignment: .vertical) { listLayout, element  in
+//            listLayout.add(component: Text("Vinicius"))
+//
+//        }.position(top: 30, left: 0, bottom: 0, right: 0)
     }
 }
 

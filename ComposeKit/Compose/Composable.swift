@@ -26,13 +26,31 @@ extension Composable where Self: UIViewController{
     }
     
     @discardableResult
-    func List(_ items: Array<Any>, alignment: AlignmentList) -> Component {
+    func List(_ items: Array<Any>, alignment: AlignmentList,  _ completion: (ListComponent, Any) -> Void) -> ListComponent {
         let listComponent = ListComponent(elements: items, alignment: alignment)
         listComponent.addComponent(toView: self.view)
+        
+        items.forEach { (element) in
+            completion(listComponent,element)
+        }
+        
+        
         return listComponent
     }
+    
+    @discardableResult
+    func Button() -> ButtonComponent  {
+        let buttonComponent = ButtonComponent()
+        buttonComponent.addComponent(toView: self.view)
+        
+        let gesture = ComposeListener()
+        
+        
+        buttonComponent.viewComponent.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector?))
+        
+        return buttonComponent
+    }
 }
-
 
 protocol Component {
     var viewComponent: UIView { get set }
